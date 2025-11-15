@@ -1,0 +1,11 @@
+[Wed Nov 12 12:22:02 2025] IP: 127.0.0.1, Scenario ID: 3, Result: phishing_link
+[Wed Nov 12 12:22:12 2025] IP: 127.0.0.1, Scenario ID: 2, Result: safe_link
+[Wed Nov 12 21:33:59 2025] IP: 127.0.0.1, Scenario ID: 3, Result: phishing_link
+[Sat Nov 15 13:17:46 2025] IP: 127.0.0.1, Scenario ID: 1, Result: CLICKED_PHISHING_LINK
+[Sat Nov 15 13:17:58 2025] IP: 127.0.0.1, Scenario ID: 1, Result: safe_link
+[Sat Nov 15 13:18:07 2025] IP: 127.0.0.1, Scenario ID: 1, Result: CLICKED_PHISHING_LINK
+[Sat Nov 15 13:22:12 2025] IP: 127.0.0.1, Scenario ID: 2, Result: safe_link
+[Sat Nov 15 13:22:18 2025] IP: 127.0.0.1, Scenario ID: 2, Result: CLICKED_PHISHING_LINK
+[Sat Nov 15 13:23:09 2025] IP: 127.0.0.1, Scenario ID: 2, Result: CLICKED_PHISHING_LINK
+[Sat Nov 15 13:23:25 2025] IP: 127.0.0.1, Scenario ID: 3, Result: CLICKED_PHISHING_LINK
+[Sat Nov 15 13:23:31 2025] IP: 127.0.0.1, Scenario ID: 3, Result: safe_link

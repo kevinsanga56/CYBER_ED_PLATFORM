@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Home - Community Cyber Guard{% endblock %}
+
+{% block content %}
+    <h1>Welcome to Your Digital Defense Hub</h1>
+    <p>This project provides free, interactive tools and tailored information to protect you, your business, and your family from online threats.</p>
+    
+    <h2>Choose Your Learning Path:</h2>
+    <div class="card-container">
+        <div class="card">
+            <h3>Cyber Safety for Youth</h3>
+            <p>Learn how to manage your digital footprint, protect your identity, and spot gaming scams.</p>
+            <a href="{{ url_for('youth_info') }}" class="button">Go to Youth Info</a>
+        </div>
+        
+        <div class="card">
+            <h3>Digital Defense for Small Businesses</h3>
+            <p>Essential steps to protect your finances, customer data, and prevent invoice fraud.</p>
+            <a href="{{ url_for('business_info') }}" class="button">Go to Business Hub</a>
+        </div>
+        
+        <div class="card">
+            <h3>Secure Technology for Tea Farmers</h3>
+            <p>Guides on safe mobile banking, protecting IoT devices, and recognizing co-op payment scams.</p>
+            <a href="{{ url_for('farmer_info') }}" class="button">Go to Farmers' Guide</a>
+        </div>
+    </div>
+    
+    <hr>
+    
+    <h2>Try Our Interactive Tools</h2>
+    <p>Test your skills against common threats:</p>
+    <ul>
+        <li><a href="{{ url_for('phishing_simulator_start') }}">🎣 Phishing & Scam Simulator</a></li>
+        <li><a href="{{ url_for('password_checker') }}">🔑 Password Strength Checker</a></li>
+    </ul>
+{% endblock %}

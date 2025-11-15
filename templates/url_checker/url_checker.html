@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Link Safety Checker{% endblock %}
+
+{% block content %}
+    <h1>🛡️ Link Safety Checker</h1>
+    <p>Before clicking a suspicious link from an email or text, paste it here to perform basic security checks (HTTPS and domain structure).</p>
+    
+    <div class="tool-card">
+        <label for="url_input">Paste Link Here:</label>
+        <input type="text" id="url_input" placeholder="e.g., https://teaco-op.com/login" autocomplete="off">
+        
+        <button onclick="checkUrl()" class="button" id="check_button">Check Link Safety</button>
+        
+        <div id="url_feedback" style="margin-top: 20px;">
+            <p>Results will appear instantly after checking.</p>
+        </div>
+    </div>
+    
+{% endblock %}
+
+{% block head %}
+    <script src="{{ url_for('static', filename='js/url_check.js') }}"></script>
+{% endblock %}

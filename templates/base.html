@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Community Cyber Guard - {{ title|default('Protecting Your Community') }}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <header>
+    <nav>
+        <a href="{{ url_for('index') }}">🏠 Home</a> 
+        <a href="{{ url_for('phishing_simulator_start') }}">🎣 Phishing Test</a> 
+        <a href="{{ url_for('password_checker') }}">🔑 Password Check</a> 
+        <a href="{{ url_for('url_checker') }}">🛡️ Link Safety</a> 
+        <a href="{{ url_for('youth_info') }}">🧑‍💻 Youth</a> 
+        <a href="{{ url_for('business_info') }}">💼 Business</a> 
+        <a href="{{ url_for('farmer_info') }}">🚜 Farmers</a>
+        <a href="{{ url_for('checklist') }}">✅ Checklist</a>
+    </nav>
+    </header>
+    
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>
+            &copy; {{ current_year }} Cyber Guard Project. Built for Community Education.
+            | *+254743678792:* [kevin kiptum] at *kevinsanga1618@gmail.com* 📧
+            | <a href="[Link to your GitHub Repository]" target="_blank">View Project Source Code</a>
+        </p>
+    </footer>
+</body>
+</html>

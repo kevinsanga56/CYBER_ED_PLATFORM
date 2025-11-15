@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Phishing Test Result{% endblock %}
+
+{% block content %}
+    <h1>🎣 Phishing Test Result</h1>
+    
+    <div class="result-box">
+        {% if is_safe %}
+            <h2 class="result-safe">✅ SUCCESS! You spotted the scam.</h2>
+            <p>You chose the safest option by deciding to verify the request through an official, trusted channel.</p>
+            <p><strong>Scenario:</strong> {{ scenario_name }}</p>
+            <hr>
+            <h3>Why you were correct:</h3>
+            <p>{{ explanation }}</p>
+        {% else %}
+            <h2 class="result-fail">❌ WARNING! You failed the test.</h2>
+            <p>You clicked a suspicious link, which in a real-world scenario could lead to a compromise of your password, bank account, or data.</p>
+            <p><strong>Scenario:</strong> {{ scenario_name }}</p>
+            <hr>
+            <h3>What went wrong:</h3>
+            <p>{{ explanation }}</p>
+        {% endif %}
+    </div>
+    
+    <div class="next-steps">
+        <a href="{{ url_for('phishing_simulator_start') }}" class="button">Try Another Scenario</a>
+        <a href="{{ url_for('index') }}" class="button button-safe">Back to Home</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>✅ The Community Cyber Guard Safety Checklist</h1>
+    <p class="lead" style="font-size: 1.1em; color: var(--color-text-light);">
+        This is your essential, actionable guide. Complete these steps today to protect your identity, data, and finances.
+    </p>
+
+    <hr>
+
+    <h2>🛡️ Core Defense (For Everyone)</h2>
+    <div class="tool-card">
+        <p>These actions are non-negotiable for security in the digital age.</p>
+        <ul>
+            <li>**Enable Multi-Factor Authentication (MFA):** Set up MFA on your primary email, banking apps, and social media. It's your most important defense.</li>
+            <li>**Use Unique Passphrases:** Create long, memorable, and unique passwords (15+ characters) for every account. <a href="{{ url_for('password_checker') }}">Test your password here!</a></li>
+            <li>**PINs are Sacred:** Never share your Mobile PIN, Bank PIN, or One-Time Passwords (OTPs) with anyone—not even "support staff."</li>
+        </ul>
+    </div>
+
+    <h2>🎣 Phishing and Scam Spotting</h2>
+    <div class="warning-text">
+        <p>🛑 **STOP! Think! Verify!** Scams rely on urgency and panic. Always pause before clicking.</p>
+        <ul>
+            <li>**Link Check:** Before clicking a link in an unexpected email or text, hover over it (or paste it into our <a href="{{ url_for('url_checker') }}">Link Safety Checker</a>).</li>
+            <li>**Verify Identity:** If a request involves money (invoices, payments, M-Pesa), **do not reply to the email/text.** Call the person/company on a *known, trusted* phone number to verify the request.</li>
+            <li>**Be Skeptical of "Free":** Free money, free gift cards, or free game currency is almost always bait for a scam.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h2>🧑‍💻 Audience-Specific Protections</h2>
+    <div class="card-container">
+        <div class="card" style="border-left: 5px solid var(--color-primary);">
+            <h3>For Youth & Students</h3>
+            <ul>
+                <li>**Digital Footprint:** Assume anything you post is permanent and public.</li>
+                <li>**Privacy Settings:** Set social media accounts to **Private** and limit location sharing.</li>
+                <li>**Gaming Scams:** Never share login details with moderators or "security experts" in DMs.</li>
+            </ul>
+        </div>
+        
+        <div class="card" style="border-left: 5px solid var(--color-success);">
+            <h3>For Small Businesses</h3>
+            <ul>
+                <li>**Invoice Fraud:** Institute a rule that all changes to supplier bank details require verbal confirmation from two people.</li>
+                <li>**Data Backup:** Implement the **3-2-1 Backup Rule** (3 copies, 2 different media, 1 copy offsite/offline).</li>
+            </ul>
+        </div>
+        
+        <div class="card" style="border-left: 5px solid var(--color-warning);">
+            <h3>For Tea Farmers</h3>
+            <ul>
+                <li>**Mobile Security:** Lock your phone with a strong PIN/fingerprint. Treat your phone as your bank vault.</li>
+                <li>**Co-Op Scams:** If you receive a payment alert or issue, call the official factory/co-op number—do not trust the number that called you.</li>
+                <li>**Device Passwords:** Change the default passwords on all smart farm equipment and Wi-Fi routers.</li>
+            </ul>
+        </div>
+    </div>
+    
+{% endblock %}
